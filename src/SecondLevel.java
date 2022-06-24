@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class SecondLevel {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Write method that checks whether a given string is a palindrome. A palindrome is a phrase that reads the same from the front and the back.");
         System.out.println("Enter phrase");
         String phrase = scanner.nextLine().replaceAll("\\s+","").toLowerCase();
 

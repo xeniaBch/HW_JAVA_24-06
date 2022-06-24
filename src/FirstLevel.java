@@ -16,32 +16,36 @@ public class FirstLevel {
 
         System.out.println();
 
-        System.out.println("Task2");
+        System.out.println("Task2: Implement a method that returns the index of the biggest element of a given array of int");
         int[] array = createArray(scanner);
         int max = findMax(array);
-        findMaxPosition(array, max);
+        System.out.println("Position of the max element is: "+ findMaxPosition(array, max));
 
         System.out.println();
 
-        System.out.println("Task3");
+        System.out.println("Task3: Implement a method that returns the sum of elements of the given array of int");
         int[] array1 = createArray(scanner);
-        countArraySum(scanner, array1);
+        System.out.println("Sum of all elements in array is: " +  countArraySum(scanner, array1));
+
     }
 
-    private static void countArraySum(Scanner scanner, int[] array) {
+    private static int countArraySum(Scanner scanner, int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
-        System.out.println("Sum of all array elements is: "+ sum);
+        return sum;
     }
 
-    private static void findMaxPosition(int[] array, int max) {
+    private static int findMaxPosition(int[] array, int max) {
+        int index = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == max) {
-                System.out.printf("Maximum is on position %s", i);
+                index = i;
+                break;
             }
         }
+        return index;
     }
 
     private static int findMax(int[] array) {
