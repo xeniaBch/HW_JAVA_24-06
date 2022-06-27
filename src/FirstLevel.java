@@ -70,13 +70,13 @@ public class FirstLevel {
         return array;
     }
 
-    private static String replaceChar(String phrase, String first, String second) {
-        String string = "";
+    private static StringBuilder replaceChar(String phrase, String first, String second) {
+        StringBuilder string = new StringBuilder();
         for (int i = 0; i < phrase.length(); i++) {
             if (phrase.charAt(i) == first.charAt(0)) {
-                string = string + second;
+                string.append(second);
             } else {
-                string = string + phrase.charAt(i);
+                string.append(phrase.charAt(i));
             }
         }
         return string;
